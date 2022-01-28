@@ -1,4 +1,4 @@
-name: "Wait for Netlify Deployment"
+name: "Wait for Netlify Deployment/Readiness/Response"
 description: "Waits for the current GitHub commit Netlify deploy to be ready. Useful in combination with tools like Lighthouse or Cypress."
 branding:
   icon: "clock"
