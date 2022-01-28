@@ -16,7 +16,15 @@ This action uses the Netlify API to always retrieve the correct deployment being
 
 **Required** The API ID of your site. See Settings > Site Details > General in the Netlify UI
 
-### `max_timeout`
+### `deploy_timeout`
+
+Optional — The amount of time to spend waiting on the Netlify deployment to respond with a "ready" status. Defaults to 300 seconds.
+
+### `readiness_timeout`
+
+Optional — The amount of time to spend waiting on the Netlify deployment to respond with a "ready" status. Defaults to 900 seconds.
+
+### `response_timeout`
 
 Optional — The amount of time to spend waiting on the Netlify deployment to respond with a success HTTP code after reaching "ready" status. Defaults to 60 seconds.
 
@@ -43,7 +51,7 @@ steps:
       site_id: 'YOUR_SITE_ID' # See Settings > Site Details > General in the Netlify UI
     env:
       NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
-      
+
 # Then use it in a later step like:
 # ${{ steps.waitForDeployment.outputs.url }}
 ```
