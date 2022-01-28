@@ -7,8 +7,14 @@ inputs:
   site_id:
     description: "The Netlify site ID to test against, get this from the Netlify UI under site settings."
     required: true
-  max_timeout:
-    description: "The max time to wait after the deployment is ready for a valid HTTP status code."
+  deploy_timeout:
+    description: "The amount of time to spend waiting on the Netlify deployment to complete the build phase. Defaults to 300 seconds."
+    required: false
+  readiness_timeout:
+    description: "The amount of time to spend waiting on the Netlify deployment to respond with a \"ready\" status. Defaults to 900 seconds."
+    required: false
+  response_timeout:
+    description: "The amount of time to spend waiting on the Netlify deployment to respond with a success HTTP code after reaching \"ready\" status. Defaults to 60 seconds."
     required: false
 outputs:
   deploy_id:

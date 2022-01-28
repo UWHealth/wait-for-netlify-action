@@ -18,7 +18,7 @@ This action uses the Netlify API to always retrieve the correct deployment being
 
 ### `deploy_timeout`
 
-Optional — The amount of time to spend waiting on the Netlify deployment to respond with a "ready" status. Defaults to 300 seconds.
+Optional — The amount of time to spend waiting on the Netlify deployment to complete the build phase. Defaults to 300 seconds.
 
 ### `readiness_timeout`
 
