@@ -2,9 +2,10 @@
   "name": "wait-for-netlify-action",
   "version": "4.0.1",
   "description": "A GitHub action that waits for a Netlify deployment preview for the current commit being built",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build index.js --license licenses.txt"
   },
   "keywords": [
     "github-action",
@@ -14,8 +15,11 @@
   "author": "Evan Jacobs",
   "license": "ISC",
   "dependencies": {
-    "@actions/core": "1.2.4",
-    "@actions/github": "^4.0.0",
-    "axios": "0.19.2"
+    "@actions/core": "1.6.0",
+    "@actions/github": "^5.0.1",
+    "axios": "0.26.1"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.33.3"
   }
 }
