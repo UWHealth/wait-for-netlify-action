@@ -1,6 +1,6 @@
 {
   "name": "wait-for-netlify-action",
-  "version": "5.0.2",
+  "version": "5.1.0",
   "description": "A GitHub action that waits for a Netlify deployment preview for the current commit being built",
   "main": "dist/index.js",
   "scripts": {
@@ -12,14 +12,14 @@
     "github",
     "netlify"
   ],
-  "author": "Evan Jacobs",
+  "author": "Evan Jacobs, Nathan Morris",
   "license": "ISC",
   "dependencies": {
-    "@actions/core": "1.10.0",
-    "@actions/github": "^5.1.1",
-    "axios": "1.4.0"
+    "@actions/core": "1.10.1",
+    "@actions/github": "^6.0.0",
+    "axios": "1.6.7"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.36.1"
+    "@vercel/ncc": "^0.38.1"
   }
 }
