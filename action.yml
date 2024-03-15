@@ -3,6 +3,9 @@ description: "Waits for the current GitHub commit Netlify deploy to be ready. Us
 branding:
   icon: "clock"
   color: "blue"
+runs:
+  using: "node20"
+  main: "dist/index.js"
 inputs:
   site_id:
     description: "The Netlify site ID to test against, get this from the Netlify UI under site settings."
@@ -25,6 +28,3 @@ outputs:
   url:
     description: "The fully qualified deployment URL"
   
-runs:
-  using: "node16"
-  main: "dist/index.js"
